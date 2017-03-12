@@ -40,7 +40,8 @@ public class TestApp {
 
         System.out.println("Printing John2 (unmarshaled from byte array serialized from by version)");
         System.out.println(john2);
-        System.out.println("Unreadable field 3 is also dumped above\n");
+        System.out.println("Unreadable field 3 is also dumped above");
+        System.out.println("The default value for the new address field was overridden by the read operation\n");
 
         System.out.printf("Fields for john %s\n", john.getDescriptorForType().getFields());
         System.out.printf("Fields for john2 %s\n\n", john2.getDescriptorForType().getFields());

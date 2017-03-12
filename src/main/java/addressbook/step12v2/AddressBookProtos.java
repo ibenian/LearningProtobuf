@@ -46,26 +46,26 @@ public final class AddressBookProtos {
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
-    boolean hasAdress();
+    boolean hasAddress();
     /**
      * <pre>
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
-    java.lang.String getAdress();
+    java.lang.String getAddress();
     /**
      * <pre>
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
     com.google.protobuf.ByteString
-        getAdressBytes();
+        getAddressBytes();
 
     /**
      * <pre>
@@ -125,7 +125,7 @@ public final class AddressBookProtos {
     private Person() {
       name_ = "";
       id_ = 0;
-      adress_ = "";
+      address_ = "default address";
       phoneNumber_ = java.util.Collections.emptyList();
     }
 
@@ -180,7 +180,7 @@ public final class AddressBookProtos {
             case 42: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              adress_ = bs;
+              address_ = bs;
               break;
             }
           }
@@ -992,16 +992,16 @@ public final class AddressBookProtos {
       return id_;
     }
 
-    public static final int ADRESS_FIELD_NUMBER = 5;
-    private volatile java.lang.Object adress_;
+    public static final int ADDRESS_FIELD_NUMBER = 5;
+    private volatile java.lang.Object address_;
     /**
      * <pre>
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
-    public boolean hasAdress() {
+    public boolean hasAddress() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
@@ -1009,10 +1009,10 @@ public final class AddressBookProtos {
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
-    public java.lang.String getAdress() {
-      java.lang.Object ref = adress_;
+    public java.lang.String getAddress() {
+      java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
@@ -1020,7 +1020,7 @@ public final class AddressBookProtos {
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
-          adress_ = s;
+          address_ = s;
         }
         return s;
       }
@@ -1030,16 +1030,16 @@ public final class AddressBookProtos {
      *optional string email = 3;                // Removed from schema
      * </pre>
      *
-     * <code>optional string adress = 5;</code>
+     * <code>optional string address = 5 [default = "default address"];</code>
      */
     public com.google.protobuf.ByteString
-        getAdressBytes() {
-      java.lang.Object ref = adress_;
+        getAddressBytes() {
+      java.lang.Object ref = address_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        adress_ = b;
+        address_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1133,7 +1133,7 @@ public final class AddressBookProtos {
         output.writeMessage(4, phoneNumber_.get(i));
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, adress_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, address_);
       }
       unknownFields.writeTo(output);
     }
@@ -1155,7 +1155,7 @@ public final class AddressBookProtos {
           .computeMessageSize(4, phoneNumber_.get(i));
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, adress_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, address_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1184,10 +1184,10 @@ public final class AddressBookProtos {
         result = result && (getId()
             == other.getId());
       }
-      result = result && (hasAdress() == other.hasAdress());
-      if (hasAdress()) {
-        result = result && getAdress()
-            .equals(other.getAdress());
+      result = result && (hasAddress() == other.hasAddress());
+      if (hasAddress()) {
+        result = result && getAddress()
+            .equals(other.getAddress());
       }
       result = result && getPhoneNumberList()
           .equals(other.getPhoneNumberList());
@@ -1210,9 +1210,9 @@ public final class AddressBookProtos {
         hash = (37 * hash) + ID_FIELD_NUMBER;
         hash = (53 * hash) + getId();
       }
-      if (hasAdress()) {
-        hash = (37 * hash) + ADRESS_FIELD_NUMBER;
-        hash = (53 * hash) + getAdress().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
       }
       if (getPhoneNumberCount() > 0) {
         hash = (37 * hash) + PHONENUMBER_FIELD_NUMBER;
@@ -1341,7 +1341,7 @@ public final class AddressBookProtos {
         bitField0_ = (bitField0_ & ~0x00000001);
         id_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        adress_ = "";
+        address_ = "default address";
         bitField0_ = (bitField0_ & ~0x00000004);
         if (phoneNumberBuilder_ == null) {
           phoneNumber_ = java.util.Collections.emptyList();
@@ -1384,7 +1384,7 @@ public final class AddressBookProtos {
         if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
           to_bitField0_ |= 0x00000004;
         }
-        result.adress_ = adress_;
+        result.address_ = address_;
         if (phoneNumberBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008)) {
             phoneNumber_ = java.util.Collections.unmodifiableList(phoneNumber_);
@@ -1444,9 +1444,9 @@ public final class AddressBookProtos {
         if (other.hasId()) {
           setId(other.getId());
         }
-        if (other.hasAdress()) {
+        if (other.hasAddress()) {
           bitField0_ |= 0x00000004;
-          adress_ = other.adress_;
+          address_ = other.address_;
           onChanged();
         }
         if (phoneNumberBuilder_ == null) {
@@ -1619,15 +1619,15 @@ public final class AddressBookProtos {
         return this;
       }
 
-      private java.lang.Object adress_ = "";
+      private java.lang.Object address_ = "default address";
       /**
        * <pre>
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
-      public boolean hasAdress() {
+      public boolean hasAddress() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
@@ -1635,16 +1635,16 @@ public final class AddressBookProtos {
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
-      public java.lang.String getAdress() {
-        java.lang.Object ref = adress_;
+      public java.lang.String getAddress() {
+        java.lang.Object ref = address_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
-            adress_ = s;
+            address_ = s;
           }
           return s;
         } else {
@@ -1656,16 +1656,16 @@ public final class AddressBookProtos {
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
       public com.google.protobuf.ByteString
-          getAdressBytes() {
-        java.lang.Object ref = adress_;
+          getAddressBytes() {
+        java.lang.Object ref = address_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          adress_ = b;
+          address_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -1676,15 +1676,15 @@ public final class AddressBookProtos {
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
-      public Builder setAdress(
+      public Builder setAddress(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
-        adress_ = value;
+        address_ = value;
         onChanged();
         return this;
       }
@@ -1693,11 +1693,11 @@ public final class AddressBookProtos {
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
-      public Builder clearAdress() {
+      public Builder clearAddress() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        adress_ = getDefaultInstance().getAdress();
+        address_ = getDefaultInstance().getAddress();
         onChanged();
         return this;
       }
@@ -1706,15 +1706,15 @@ public final class AddressBookProtos {
        *optional string email = 3;                // Removed from schema
        * </pre>
        *
-       * <code>optional string adress = 5;</code>
+       * <code>optional string address = 5 [default = "default address"];</code>
        */
-      public Builder setAdressBytes(
+      public Builder setAddressBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000004;
-        adress_ = value;
+        address_ = value;
         onChanged();
         return this;
       }
@@ -2098,12 +2098,12 @@ public final class AddressBookProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023addressbookv2.proto\022\010tutorial\"\222\001\n\006Pers" +
-      "on\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \001(\005\022\016\n\006adress\030\005" +
-      " \001(\t\0221\n\013phoneNumber\030\004 \003(\0132\034.tutorial.Per" +
-      "son.PhoneNumber\032+\n\013PhoneNumber\022\016\n\006number" +
-      "\030\001 \002(\t\022\014\n\004type\030\002 \001(\tB\035\n\010step12v2B\021Addres" +
-      "sBookProtos"
+      "\n\023addressbookv2.proto\022\010tutorial\"\244\001\n\006Pers" +
+      "on\022\014\n\004name\030\001 \002(\t\022\n\n\002id\030\002 \001(\005\022 \n\007address\030" +
+      "\005 \001(\t:\017default address\0221\n\013phoneNumber\030\004 " +
+      "\003(\0132\034.tutorial.Person.PhoneNumber\032+\n\013Pho" +
+      "neNumber\022\016\n\006number\030\001 \002(\t\022\014\n\004type\030\002 \001(\tB\035" +
+      "\n\010step12v2B\021AddressBookProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2122,7 +2122,7 @@ public final class AddressBookProtos {
     internal_static_tutorial_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tutorial_Person_descriptor,
-        new java.lang.String[] { "Name", "Id", "Adress", "PhoneNumber", });
+        new java.lang.String[] { "Name", "Id", "Address", "PhoneNumber", });
     internal_static_tutorial_Person_PhoneNumber_descriptor =
       internal_static_tutorial_Person_descriptor.getNestedTypes().get(0);
     internal_static_tutorial_Person_PhoneNumber_fieldAccessorTable = new
