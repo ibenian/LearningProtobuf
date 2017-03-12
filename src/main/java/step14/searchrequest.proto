@@ -1,0 +1,15 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step14";
+option java_outer_classname = "AddressBookProtos";
+
+message SearchRequest {
+    reserved 4 to 10;               // reserving a range of tags
+
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3;
+
+
+}
