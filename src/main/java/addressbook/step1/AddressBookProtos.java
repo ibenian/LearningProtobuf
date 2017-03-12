@@ -17,28 +17,12 @@ public final class AddressBookProtos {
   public interface PersonOrBuilder extends
       // @@protoc_insertion_point(interface_extends:tutorial.Person)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string name = 1;</code>
-     */
-    java.lang.String getName();
-    /**
-     * <code>string name = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getNameBytes();
-
-    /**
-     * <code>string mname = 2;</code>
-     */
-    java.lang.String getMname();
-    /**
-     * <code>string mname = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getMnameBytes();
   }
   /**
+   * <pre>
+   * Empty message
+   * </pre>
+   *
    * Protobuf type {@code tutorial.Person}
    */
   public  static final class Person extends
@@ -50,21 +34,20 @@ public final class AddressBookProtos {
       super(builder);
     }
     private Person() {
-      name_ = "";
-      mname_ = "";
     }
 
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
-      return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
+      return this.unknownFields;
     }
     private Person(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
-      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -74,21 +57,10 @@ public final class AddressBookProtos {
               done = true;
               break;
             default: {
-              if (!input.skipField(tag)) {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
                 done = true;
               }
-              break;
-            }
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              mname_ = s;
               break;
             }
           }
@@ -99,6 +71,7 @@ public final class AddressBookProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
@@ -114,74 +87,6 @@ public final class AddressBookProtos {
               step1.AddressBookProtos.Person.class, step1.AddressBookProtos.Person.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
-    /**
-     * <code>string name = 1;</code>
-     */
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string name = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MNAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object mname_;
-    /**
-     * <code>string mname = 2;</code>
-     */
-    public java.lang.String getMname() {
-      java.lang.Object ref = mname_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        mname_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string mname = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getMnameBytes() {
-      java.lang.Object ref = mname_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        mname_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
@@ -194,12 +99,7 @@ public final class AddressBookProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
-      }
-      if (!getMnameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, mname_);
-      }
+      unknownFields.writeTo(output);
     }
 
     public int getSerializedSize() {
@@ -207,12 +107,7 @@ public final class AddressBookProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (!getNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
-      }
-      if (!getMnameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, mname_);
-      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -229,10 +124,7 @@ public final class AddressBookProtos {
       step1.AddressBookProtos.Person other = (step1.AddressBookProtos.Person) obj;
 
       boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getMname()
-          .equals(other.getMname());
+      result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
 
@@ -243,10 +135,6 @@ public final class AddressBookProtos {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
-      hash = (37 * hash) + MNAME_FIELD_NUMBER;
-      hash = (53 * hash) + getMname().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -330,6 +218,10 @@ public final class AddressBookProtos {
       return builder;
     }
     /**
+     * <pre>
+     * Empty message
+     * </pre>
+     *
      * Protobuf type {@code tutorial.Person}
      */
     public static final class Builder extends
@@ -365,10 +257,6 @@ public final class AddressBookProtos {
       }
       public Builder clear() {
         super.clear();
-        name_ = "";
-
-        mname_ = "";
-
         return this;
       }
 
@@ -391,8 +279,6 @@ public final class AddressBookProtos {
 
       public step1.AddressBookProtos.Person buildPartial() {
         step1.AddressBookProtos.Person result = new step1.AddressBookProtos.Person(this);
-        result.name_ = name_;
-        result.mname_ = mname_;
         onBuilt();
         return result;
       }
@@ -434,14 +320,7 @@ public final class AddressBookProtos {
 
       public Builder mergeFrom(step1.AddressBookProtos.Person other) {
         if (other == step1.AddressBookProtos.Person.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          onChanged();
-        }
-        if (!other.getMname().isEmpty()) {
-          mname_ = other.mname_;
-          onChanged();
-        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -467,152 +346,14 @@ public final class AddressBookProtos {
         }
         return this;
       }
-
-      private java.lang.Object name_ = "";
-      /**
-       * <code>string name = 1;</code>
-       */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string name = 1;</code>
-       */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        name_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       */
-      public Builder clearName() {
-        
-        name_ = getDefaultInstance().getName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string name = 1;</code>
-       */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        name_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object mname_ = "";
-      /**
-       * <code>string mname = 2;</code>
-       */
-      public java.lang.String getMname() {
-        java.lang.Object ref = mname_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          mname_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string mname = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getMnameBytes() {
-        java.lang.Object ref = mname_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          mname_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string mname = 2;</code>
-       */
-      public Builder setMname(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        mname_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string mname = 2;</code>
-       */
-      public Builder clearMname() {
-        
-        mname_ = getDefaultInstance().getMname();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string mname = 2;</code>
-       */
-      public Builder setMnameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        mname_ = value;
-        onChanged();
-        return this;
-      }
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.setUnknownFields(unknownFields);
       }
 
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return this;
+        return super.mergeUnknownFields(unknownFields);
       }
 
 
@@ -629,7 +370,7 @@ public final class AddressBookProtos {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Person>
+    @java.lang.Deprecated public static final com.google.protobuf.Parser<Person>
         PARSER = new com.google.protobuf.AbstractParser<Person>() {
       public Person parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
@@ -668,9 +409,8 @@ public final class AddressBookProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021addressbook.proto\022\010tutorial\"%\n\006Person\022" +
-      "\014\n\004name\030\001 \001(\t\022\r\n\005mname\030\002 \001(\tB\032\n\005step1B\021A" +
-      "ddressBookProtosb\006proto3"
+      "\n\021addressbook.proto\022\010tutorial\"\010\n\006PersonB" +
+      "\032\n\005step1B\021AddressBookProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -689,7 +429,7 @@ public final class AddressBookProtos {
     internal_static_tutorial_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tutorial_Person_descriptor,
-        new java.lang.String[] { "Name", "Mname", });
+        new java.lang.String[] { });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
