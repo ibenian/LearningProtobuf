@@ -1,0 +1,20 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step8v2";
+option java_outer_classname = "AddressBookProtos";
+
+message Person {
+    required string name = 1;
+    optional int32 id = 2;
+    optional string email = 3;
+    optional string address = 5;                // Proper index for backward compatibility
+
+    message PhoneNumber {                       // Sub-message type
+        required string number = 1;
+        optional string type = 2;
+    }
+
+    repeated PhoneNumber phoneNumber = 4;       // Repeated sub-messages
+
+}
