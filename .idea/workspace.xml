@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65d1f1f4-58df-4e10-8f12-9619ea06ef28" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/addressbook/step11/AddressBookProtos.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/addressbook/step11v2/AddressBookProtos.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/addressbook/step12/AddressBookProtos.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/addressbook/step12v2/AddressBookProtos.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step11/TestApp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step11/addressbook.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step11/addressbookv2.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step12/TestApp.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step12/addressbook.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/step12/addressbookv2.proto" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/step9/TestApp.java" afterPath="$PROJECT_DIR$/src/main/java/step9/TestApp.java" />
     </list>
     <ignored path="LearningProtobuf.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,34 +35,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="TestApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step8/TestApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step9/TestApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/step10/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+            <state relative-caret-position="836">
+              <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,32 +46,103 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addressbookv2.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto">
+      <file leaf-file-name="AddressBookProtos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/addressbook/step10v2/AddressBookProtos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="100" lean-forward="false" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addressbook.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step10/addressbook.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addressbook.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step9/addressbook.proto">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="236">
+              <caret line="1003" column="21" lean-forward="false" selection-start-line="1003" selection-start-column="15" selection-end-line="1003" selection-end-column="21" />
+              <folding>
+                <element signature="e#3035#3036#0" expanded="true" />
+                <element signature="e#3063#3064#0" expanded="true" />
+                <element signature="e#3300#3301#0" expanded="true" />
+                <element signature="e#3339#3340#0" expanded="true" />
+                <element signature="e#5712#5713#0" expanded="true" />
+                <element signature="e#5802#5803#0" expanded="true" />
+                <element signature="e#7510#7511#0" expanded="true" />
+                <element signature="e#7542#7543#0" expanded="true" />
+                <element signature="e#7731#7732#0" expanded="true" />
+                <element signature="e#7774#7775#0" expanded="true" />
+                <element signature="e#9572#9573#0" expanded="true" />
+                <element signature="e#9678#9679#0" expanded="true" />
+                <element signature="e#10327#10328#0" expanded="true" />
+                <element signature="e#10393#10394#0" expanded="true" />
+                <element signature="e#11623#11624#0" expanded="true" />
+                <element signature="e#11689#11690#0" expanded="true" />
+                <element signature="e#18768#18769#0" expanded="true" />
+                <element signature="e#18821#18822#0" expanded="true" />
+                <element signature="e#20529#20530#0" expanded="true" />
+                <element signature="e#20584#20585#0" expanded="true" />
+                <element signature="e#22590#22591#0" expanded="true" />
+                <element signature="e#22642#22643#0" expanded="true" />
+                <element signature="e#25638#25639#0" expanded="true" />
+                <element signature="e#25708#25709#0" expanded="true" />
+                <element signature="e#27908#27909#0" expanded="true" />
+                <element signature="e#27978#27979#0" expanded="true" />
+                <element signature="e#30809#30810#0" expanded="true" />
+                <element signature="e#30850#30851#0" expanded="true" />
+                <element signature="e#30960#31341#0" expanded="true" />
+                <element signature="e#31340#31341#0" expanded="true" />
+                <element signature="e#31413#31414#0" expanded="true" />
+                <element signature="e#31444#31445#0" expanded="true" />
+                <element signature="e#31545#31546#0" expanded="true" />
+                <element signature="e#31576#31577#0" expanded="true" />
+                <element signature="e#31666#31667#0" expanded="true" />
+                <element signature="e#31707#31708#0" expanded="true" />
+                <element signature="e#31932#31933#0" expanded="true" />
+                <element signature="e#31994#31995#0" expanded="true" />
+                <element signature="e#33099#33100#0" expanded="true" />
+                <element signature="e#33161#33162#0" expanded="true" />
+                <element signature="e#33245#33246#0" expanded="true" />
+                <element signature="e#33269#33270#0" expanded="true" />
+                <element signature="e#33528#33529#0" expanded="true" />
+                <element signature="e#33590#33591#0" expanded="true" />
+                <element signature="e#33772#33773#0" expanded="true" />
+                <element signature="e#33797#33798#0" expanded="true" />
+                <element signature="e#34194#34195#0" expanded="true" />
+                <element signature="e#34227#34228#0" expanded="true" />
+                <element signature="e#34514#34515#0" expanded="true" />
+                <element signature="e#34547#34548#0" expanded="true" />
+                <element signature="e#34740#34741#0" expanded="true" />
+                <element signature="e#34780#34781#0" expanded="true" />
+                <element signature="e#35019#35020#0" expanded="true" />
+                <element signature="e#35063#35064#0" expanded="true" />
+                <element signature="e#42169#42170#0" expanded="true" />
+                <element signature="e#42218#42219#0" expanded="true" />
+                <element signature="e#43122#43123#0" expanded="true" />
+                <element signature="e#43216#43217#0" expanded="true" />
+                <element signature="e#43688#43689#0" expanded="true" />
+                <element signature="e#43739#43740#0" expanded="true" />
+                <element signature="e#44714#44715#0" expanded="true" />
+                <element signature="e#44808#44809#0" expanded="true" />
+                <element signature="e#46386#46387#0" expanded="true" />
+                <element signature="e#46434#46435#0" expanded="true" />
+                <element signature="e#50375#50376#0" expanded="true" />
+                <element signature="e#50441#50442#0" expanded="true" />
+                <element signature="e#52447#52448#0" expanded="true" />
+                <element signature="e#52513#52514#0" expanded="true" />
+                <element signature="e#52605#52606#0" expanded="true" />
+                <element signature="e#52633#52634#0" expanded="true" />
+                <element signature="e#53285#53286#0" expanded="true" />
+                <element signature="e#53351#53352#0" expanded="true" />
+                <element signature="e#53549#53550#0" expanded="true" />
+                <element signature="e#53578#53579#0" expanded="true" />
+                <element signature="e#63798#63799#0" expanded="true" />
+                <element signature="e#63868#63869#0" expanded="true" />
+                <element signature="e#65412#65413#0" expanded="true" />
+                <element signature="e#65449#65450#0" expanded="true" />
+                <element signature="e#65550#65902#0" expanded="true" />
+                <element signature="e#65901#65902#0" expanded="true" />
+                <element signature="e#65967#65968#0" expanded="true" />
+                <element signature="e#65994#65995#0" expanded="true" />
+                <element signature="e#66086#66087#0" expanded="true" />
+                <element signature="e#66113#66114#0" expanded="true" />
+                <element signature="e#66189#66190#0" expanded="true" />
+                <element signature="e#66226#66227#0" expanded="true" />
+                <element signature="e#66860#66861#0" expanded="true" />
+                <element signature="e#66887#66888#0" expanded="true" />
+                <element signature="e#67563#67869#0" expanded="true" />
+                <element signature="e#67868#67869#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,33 +157,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addressbookv2.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step8/addressbookv2.proto">
+      <file leaf-file-name="TestApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step11/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state relative-caret-position="244">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
-                <marker date="1489336653000" expanded="true" signature="138:540" ph="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressBookProtos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/addressbook/step8/AddressBookProtos.java">
+      <file leaf-file-name="TestApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step12/TestApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+            <state relative-caret-position="242">
+              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressbook.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step12/addressbook.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressbookv2.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step12/addressbookv2.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressbookv2.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step11/addressbookv2.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="addressbook.proto" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/step8/addressbook.proto">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step11/addressbook.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="66">
+              <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addressbookv2.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -165,6 +263,10 @@
       <find>builder.mark</find>
       <find>mark</find>
       <find>obj =</find>
+      <find>john2</find>
+      <find>age</find>
+      <find>getEmail</find>
+      <find>getAge</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,9 +310,16 @@
         <option value="$PROJECT_DIR$/src/main/java/step9/addressbook.proto" />
         <option value="$PROJECT_DIR$/src/main/java/step9/addressbookv2.proto" />
         <option value="$PROJECT_DIR$/src/main/java/step10/addressbook.proto" />
-        <option value="$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto" />
-        <option value="$PROJECT_DIR$/src/main/java/step10/TestApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/step9/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/step11/addressbook.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/step11/addressbookv2.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/step10/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/addressbook/step10v2/AddressBookProtos.java" />
+        <option value="$PROJECT_DIR$/src/main/java/step11/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/step12/addressbook.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/step12/TestApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/step12/addressbookv2.proto" />
       </list>
     </option>
   </component>
@@ -306,84 +415,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="step10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="step9" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="step8" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LearningProtobuf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -402,54 +433,14 @@
       <recent name="step2" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/step12" />
+      <recent name="$PROJECT_DIR$/src/main/java/step11" />
       <recent name="$PROJECT_DIR$/src/main/java/step10" />
       <recent name="$PROJECT_DIR$/src/main/java/step9" />
       <recent name="$PROJECT_DIR$/src/main/java/step8" />
-      <recent name="$PROJECT_DIR$/src/main/java/step7" />
-      <recent name="$PROJECT_DIR$/src/main/java/step6" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestApp (2)">
-    <configuration default="false" name="TestApp (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="step6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="step6.TestApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LearningProtobuf" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="TestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="step7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="step7.TestApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LearningProtobuf" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.TestApp (5)">
     <configuration default="false" name="TestApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -498,6 +489,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="step10.TestApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="LearningProtobuf" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestApp (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="step11.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="step11.TestApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="LearningProtobuf" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestApp (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="step12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="step12.TestApp" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -766,19 +797,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.TestApp (5)" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TestApp" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TestApp (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TestApp (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TestApp (3)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TestApp (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestApp (2)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.TestApp (3)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestApp (4)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestApp (5)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestApp (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestApp (3)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestApp (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.TestApp" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TestApp (5)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TestApp (5)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestApp (4)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestApp (3)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestApp (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestApp (1)" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -917,56 +948,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/addressbook.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/addressbook/step1/AddressBookProtos.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/addressbook.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/addressbook.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step1/com/example/tutorial/AddressBookProtos.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/protobufoutput/com/example/tusstorial/AxxddressBookProtos.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/protobufoutput/com/example/tutorial/AddressBookProtos.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/protobufoutput/com/ibe/learning/proto/step1/AddressBookProtos.java" />
@@ -1236,11 +1217,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step9/addressbookv2.proto">
+    <entry file="file://$PROJECT_DIR$/src/main/java/step8/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="352">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,27 +1235,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="100" lean-forward="false" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/step8/TestApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/step9/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
+        <state relative-caret-position="175">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1280,10 +1245,185 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/addressbook/step10/AddressBookProtos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step9/addressbookv2.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step10/addressbookv2.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/addressbook/step10v2/AddressBookProtos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="1003" column="21" lean-forward="false" selection-start-line="1003" selection-start-column="15" selection-end-line="1003" selection-end-column="21" />
+          <folding>
+            <element signature="e#3035#3036#0" expanded="true" />
+            <element signature="e#3063#3064#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+            <element signature="e#3339#3340#0" expanded="true" />
+            <element signature="e#5712#5713#0" expanded="true" />
+            <element signature="e#5802#5803#0" expanded="true" />
+            <element signature="e#7510#7511#0" expanded="true" />
+            <element signature="e#7542#7543#0" expanded="true" />
+            <element signature="e#7731#7732#0" expanded="true" />
+            <element signature="e#7774#7775#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9678#9679#0" expanded="true" />
+            <element signature="e#10327#10328#0" expanded="true" />
+            <element signature="e#10393#10394#0" expanded="true" />
+            <element signature="e#11623#11624#0" expanded="true" />
+            <element signature="e#11689#11690#0" expanded="true" />
+            <element signature="e#18768#18769#0" expanded="true" />
+            <element signature="e#18821#18822#0" expanded="true" />
+            <element signature="e#20529#20530#0" expanded="true" />
+            <element signature="e#20584#20585#0" expanded="true" />
+            <element signature="e#22590#22591#0" expanded="true" />
+            <element signature="e#22642#22643#0" expanded="true" />
+            <element signature="e#25638#25639#0" expanded="true" />
+            <element signature="e#25708#25709#0" expanded="true" />
+            <element signature="e#27908#27909#0" expanded="true" />
+            <element signature="e#27978#27979#0" expanded="true" />
+            <element signature="e#30809#30810#0" expanded="true" />
+            <element signature="e#30850#30851#0" expanded="true" />
+            <element signature="e#30960#31341#0" expanded="true" />
+            <element signature="e#31340#31341#0" expanded="true" />
+            <element signature="e#31413#31414#0" expanded="true" />
+            <element signature="e#31444#31445#0" expanded="true" />
+            <element signature="e#31545#31546#0" expanded="true" />
+            <element signature="e#31576#31577#0" expanded="true" />
+            <element signature="e#31666#31667#0" expanded="true" />
+            <element signature="e#31707#31708#0" expanded="true" />
+            <element signature="e#31932#31933#0" expanded="true" />
+            <element signature="e#31994#31995#0" expanded="true" />
+            <element signature="e#33099#33100#0" expanded="true" />
+            <element signature="e#33161#33162#0" expanded="true" />
+            <element signature="e#33245#33246#0" expanded="true" />
+            <element signature="e#33269#33270#0" expanded="true" />
+            <element signature="e#33528#33529#0" expanded="true" />
+            <element signature="e#33590#33591#0" expanded="true" />
+            <element signature="e#33772#33773#0" expanded="true" />
+            <element signature="e#33797#33798#0" expanded="true" />
+            <element signature="e#34194#34195#0" expanded="true" />
+            <element signature="e#34227#34228#0" expanded="true" />
+            <element signature="e#34514#34515#0" expanded="true" />
+            <element signature="e#34547#34548#0" expanded="true" />
+            <element signature="e#34740#34741#0" expanded="true" />
+            <element signature="e#34780#34781#0" expanded="true" />
+            <element signature="e#35019#35020#0" expanded="true" />
+            <element signature="e#35063#35064#0" expanded="true" />
+            <element signature="e#42169#42170#0" expanded="true" />
+            <element signature="e#42218#42219#0" expanded="true" />
+            <element signature="e#43122#43123#0" expanded="true" />
+            <element signature="e#43216#43217#0" expanded="true" />
+            <element signature="e#43688#43689#0" expanded="true" />
+            <element signature="e#43739#43740#0" expanded="true" />
+            <element signature="e#44714#44715#0" expanded="true" />
+            <element signature="e#44808#44809#0" expanded="true" />
+            <element signature="e#46386#46387#0" expanded="true" />
+            <element signature="e#46434#46435#0" expanded="true" />
+            <element signature="e#50375#50376#0" expanded="true" />
+            <element signature="e#50441#50442#0" expanded="true" />
+            <element signature="e#52447#52448#0" expanded="true" />
+            <element signature="e#52513#52514#0" expanded="true" />
+            <element signature="e#52605#52606#0" expanded="true" />
+            <element signature="e#52633#52634#0" expanded="true" />
+            <element signature="e#53285#53286#0" expanded="true" />
+            <element signature="e#53351#53352#0" expanded="true" />
+            <element signature="e#53549#53550#0" expanded="true" />
+            <element signature="e#53578#53579#0" expanded="true" />
+            <element signature="e#63798#63799#0" expanded="true" />
+            <element signature="e#63868#63869#0" expanded="true" />
+            <element signature="e#65412#65413#0" expanded="true" />
+            <element signature="e#65449#65450#0" expanded="true" />
+            <element signature="e#65550#65902#0" expanded="true" />
+            <element signature="e#65901#65902#0" expanded="true" />
+            <element signature="e#65967#65968#0" expanded="true" />
+            <element signature="e#65994#65995#0" expanded="true" />
+            <element signature="e#66086#66087#0" expanded="true" />
+            <element signature="e#66113#66114#0" expanded="true" />
+            <element signature="e#66189#66190#0" expanded="true" />
+            <element signature="e#66226#66227#0" expanded="true" />
+            <element signature="e#66860#66861#0" expanded="true" />
+            <element signature="e#66887#66888#0" expanded="true" />
+            <element signature="e#67563#67869#0" expanded="true" />
+            <element signature="e#67868#67869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/step10/TestApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="40" column="43" lean-forward="true" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
+        <state relative-caret-position="836">
+          <caret line="38" column="28" lean-forward="false" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step11/addressbook.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step11/addressbookv2.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" lean-forward="false" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step11/TestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step12/addressbook.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step12/addressbookv2.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/step12/TestApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
