@@ -6,7 +6,7 @@ import step9.AddressBookProtos.Person;
 /**
  * Created by ibenian on 3/11/17.
  *
- * Write a message, and read it from a new version (Backward compatibility)
+ * Add a new field but reuse existing field index (breaks backward compatibility without warning)
  *
  */
 public class TestApp {
@@ -40,6 +40,9 @@ public class TestApp {
 
         System.out.println("Printing John2 (unmarshaled from byte array serialized from by version)");
         System.out.println(john2);
+
+        System.out.printf("Fields for john %s\n", john.getDescriptorForType().getFields());
+        System.out.printf("Fields for john2 %s\n\n", john2.getDescriptorForType().getFields());
 
         System.out.printf("John's email: %s\n", john.getEmail());
         System.out.printf("John2's address: %s\n", john2.getAddress());     // address field read from email
