@@ -1,0 +1,15 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step17";
+option java_outer_classname = "other";
+
+enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+}

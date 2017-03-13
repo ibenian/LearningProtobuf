@@ -1,0 +1,17 @@
+syntax = "proto2";
+package tutorial;
+
+import "other.proto";
+
+option java_package = "step17";
+option java_outer_classname = "AddressBookProtos";
+
+message SearchRequest {
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3;
+
+    repeated int32 samples = 4;
+
+    optional Corpus corpus = 5 [default = UNIVERSAL];
+}

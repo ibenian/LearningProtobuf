@@ -1,7 +1,7 @@
 syntax = "proto2";
 package tutorial;
 
-option java_package = "step15";
+option java_package = "step16";
 option java_outer_classname = "AddressBookProtos";
 
 message SearchRequest {
@@ -12,9 +12,11 @@ message SearchRequest {
     repeated int32 samples = 4;
 
     enum Corpus {
+        option allow_alias = true;  // Enums can now use the same tag value
         UNIVERSAL = 0;
         WEB = 1;
-        IMAGES = 2;
+        IMAGES = 2;                 // Tag 2 is shared by two enums
+        PICTURES = 2;               // Alias for the same tag
         LOCAL = 3;
         NEWS = 4;
         PRODUCTS = 5;
