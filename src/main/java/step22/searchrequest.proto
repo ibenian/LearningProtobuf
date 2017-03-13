@@ -1,0 +1,28 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step22";
+option java_outer_classname = "AddressBookProtos";
+option java_generic_services = true;                 // Required to generate stub
+
+message SearchRequest {
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3;
+}
+
+message SearchResponse {
+    message Result {                            // Nested message type
+        required string url = 1;
+        optional string title = 2;
+        repeated string snippets = 3;           // List of snippets
+    }
+
+    repeated Result result = 1;                 // List of Result objects
+    required string status = 2;
+}
+
+service SearchService {
+    rpc Search (SearchRequest) returns (SearchResponse);
+}
+
