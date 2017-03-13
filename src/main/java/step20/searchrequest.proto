@@ -1,0 +1,27 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step20";
+option java_outer_classname = "AddressBookProtos";
+
+message SearchRequest {
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3;
+
+    extensions 100 to 199;              // reserved for extenders
+}
+
+enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+}
+extend SearchRequest {
+    repeated int32 samples = 100;       // using reserved extension tags
+    optional Corpus corpus = 101 [default = UNIVERSAL];
+}
