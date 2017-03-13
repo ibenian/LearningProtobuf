@@ -11,6 +11,6 @@ message SearchResponse {
         repeated string snippets = 3;           // List of snippets
     }
 
-    repeated Result result = 1;                 // List of Result objects
+    optional Result result = 1;                 // List of Result objects
     required string status = 2;
 }

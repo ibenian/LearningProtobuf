@@ -18,9 +18,10 @@ public class TestApp {
             throws InvalidProtocolBufferException {
         SearchResponse response1 =
                 SearchResponse.newBuilder()
-                        .addResult(SearchResponse.Result.newBuilder()
+                        .setResult(SearchResponse.Result.newBuilder()
                             .setUrl("www...")
                             .setTitle("title")
+                            .addAllSnippets(Arrays.asList("a"))
                             .buildPartial())
                         .buildPartial();
 
@@ -29,10 +30,11 @@ public class TestApp {
 
         SearchResponse response2 =
                 SearchResponse.newBuilder()
-                        .addResult(SearchResponse.Result.newBuilder()
-                                .addAllSnippets(Arrays.asList("abc", "def"))
+                        .setResult(SearchResponse.Result.newBuilder()
+                                .addAllSnippets(Arrays.asList("b", "c"))    // appends to the existing list
+                                .setTitle("title2")                         // title2 overrides
                                 .buildPartial())
-                        .setStatus("OK")
+                        .setStatus("OK")                                    // additional field
                         .buildPartial();
         System.out.println("response2:");
         System.out.println(response2);

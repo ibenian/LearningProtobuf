@@ -23,44 +23,25 @@ public final class AddressBookProtos {
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    java.util.List<step19.AddressBookProtos.SearchResponse.Result> 
-        getResultList();
+    boolean hasResult();
     /**
      * <pre>
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    step19.AddressBookProtos.SearchResponse.Result getResult(int index);
+    step19.AddressBookProtos.SearchResponse.Result getResult();
     /**
      * <pre>
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    int getResultCount();
-    /**
-     * <pre>
-     * List of Result objects
-     * </pre>
-     *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-     */
-    java.util.List<? extends step19.AddressBookProtos.SearchResponse.ResultOrBuilder> 
-        getResultOrBuilderList();
-    /**
-     * <pre>
-     * List of Result objects
-     * </pre>
-     *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-     */
-    step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder(
-        int index);
+    step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder();
 
     /**
      * <code>required string status = 2;</code>
@@ -88,7 +69,6 @@ public final class AddressBookProtos {
       super(builder);
     }
     private SearchResponse() {
-      result_ = java.util.Collections.emptyList();
       status_ = "";
     }
 
@@ -121,17 +101,21 @@ public final class AddressBookProtos {
               break;
             }
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                result_ = new java.util.ArrayList<step19.AddressBookProtos.SearchResponse.Result>();
-                mutable_bitField0_ |= 0x00000001;
+              step19.AddressBookProtos.SearchResponse.Result.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = result_.toBuilder();
               }
-              result_.add(
-                  input.readMessage(step19.AddressBookProtos.SearchResponse.Result.PARSER, extensionRegistry));
+              result_ = input.readMessage(step19.AddressBookProtos.SearchResponse.Result.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(result_);
+                result_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
               break;
             }
             case 18: {
               com.google.protobuf.ByteString bs = input.readBytes();
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000002;
               status_ = bs;
               break;
             }
@@ -143,9 +127,6 @@ public final class AddressBookProtos {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          result_ = java.util.Collections.unmodifiableList(result_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1144,58 +1125,36 @@ public final class AddressBookProtos {
 
     private int bitField0_;
     public static final int RESULT_FIELD_NUMBER = 1;
-    private java.util.List<step19.AddressBookProtos.SearchResponse.Result> result_;
+    private step19.AddressBookProtos.SearchResponse.Result result_;
     /**
      * <pre>
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    public java.util.List<step19.AddressBookProtos.SearchResponse.Result> getResultList() {
-      return result_;
+    public boolean hasResult() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
      * <pre>
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    public java.util.List<? extends step19.AddressBookProtos.SearchResponse.ResultOrBuilder> 
-        getResultOrBuilderList() {
-      return result_;
+    public step19.AddressBookProtos.SearchResponse.Result getResult() {
+      return result_ == null ? step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance() : result_;
     }
     /**
      * <pre>
      * List of Result objects
      * </pre>
      *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+     * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
      */
-    public int getResultCount() {
-      return result_.size();
-    }
-    /**
-     * <pre>
-     * List of Result objects
-     * </pre>
-     *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-     */
-    public step19.AddressBookProtos.SearchResponse.Result getResult(int index) {
-      return result_.get(index);
-    }
-    /**
-     * <pre>
-     * List of Result objects
-     * </pre>
-     *
-     * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-     */
-    public step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder(
-        int index) {
-      return result_.get(index);
+    public step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder() {
+      return result_ == null ? step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance() : result_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
@@ -1204,7 +1163,7 @@ public final class AddressBookProtos {
      * <code>required string status = 2;</code>
      */
     public boolean hasStatus() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
      * <code>required string status = 2;</code>
@@ -1250,8 +1209,8 @@ public final class AddressBookProtos {
         memoizedIsInitialized = 0;
         return false;
       }
-      for (int i = 0; i < getResultCount(); i++) {
-        if (!getResult(i).isInitialized()) {
+      if (hasResult()) {
+        if (!getResult().isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -1262,10 +1221,10 @@ public final class AddressBookProtos {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < result_.size(); i++) {
-        output.writeMessage(1, result_.get(i));
-      }
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, getResult());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, status_);
       }
       unknownFields.writeTo(output);
@@ -1276,11 +1235,11 @@ public final class AddressBookProtos {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < result_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, result_.get(i));
-      }
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getResult());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, status_);
       }
       size += unknownFields.getSerializedSize();
@@ -1300,8 +1259,11 @@ public final class AddressBookProtos {
       step19.AddressBookProtos.SearchResponse other = (step19.AddressBookProtos.SearchResponse) obj;
 
       boolean result = true;
-      result = result && getResultList()
-          .equals(other.getResultList());
+      result = result && (hasResult() == other.hasResult());
+      if (hasResult()) {
+        result = result && getResult()
+            .equals(other.getResult());
+      }
       result = result && (hasStatus() == other.hasStatus());
       if (hasStatus()) {
         result = result && getStatus()
@@ -1318,9 +1280,9 @@ public final class AddressBookProtos {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getResultCount() > 0) {
+      if (hasResult()) {
         hash = (37 * hash) + RESULT_FIELD_NUMBER;
-        hash = (53 * hash) + getResultList().hashCode();
+        hash = (53 * hash) + getResult().hashCode();
       }
       if (hasStatus()) {
         hash = (37 * hash) + STATUS_FIELD_NUMBER;
@@ -1446,11 +1408,11 @@ public final class AddressBookProtos {
       public Builder clear() {
         super.clear();
         if (resultBuilder_ == null) {
-          result_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          result_ = null;
         } else {
           resultBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         status_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
         return this;
@@ -1477,17 +1439,16 @@ public final class AddressBookProtos {
         step19.AddressBookProtos.SearchResponse result = new step19.AddressBookProtos.SearchResponse(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
         if (resultBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            result_ = java.util.Collections.unmodifiableList(result_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
           result.result_ = result_;
         } else {
           result.result_ = resultBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000001;
+          to_bitField0_ |= 0x00000002;
         }
         result.status_ = status_;
         result.bitField0_ = to_bitField0_;
@@ -1532,31 +1493,8 @@ public final class AddressBookProtos {
 
       public Builder mergeFrom(step19.AddressBookProtos.SearchResponse other) {
         if (other == step19.AddressBookProtos.SearchResponse.getDefaultInstance()) return this;
-        if (resultBuilder_ == null) {
-          if (!other.result_.isEmpty()) {
-            if (result_.isEmpty()) {
-              result_ = other.result_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureResultIsMutable();
-              result_.addAll(other.result_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.result_.isEmpty()) {
-            if (resultBuilder_.isEmpty()) {
-              resultBuilder_.dispose();
-              resultBuilder_ = null;
-              result_ = other.result_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              resultBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getResultFieldBuilder() : null;
-            } else {
-              resultBuilder_.addAllMessages(other.result_);
-            }
-          }
+        if (other.hasResult()) {
+          mergeResult(other.getResult());
         }
         if (other.hasStatus()) {
           bitField0_ |= 0x00000002;
@@ -1572,8 +1510,8 @@ public final class AddressBookProtos {
         if (!hasStatus()) {
           return false;
         }
-        for (int i = 0; i < getResultCount(); i++) {
-          if (!getResult(i).isInitialized()) {
+        if (hasResult()) {
+          if (!getResult().isInitialized()) {
             return false;
           }
         }
@@ -1599,30 +1537,31 @@ public final class AddressBookProtos {
       }
       private int bitField0_;
 
-      private java.util.List<step19.AddressBookProtos.SearchResponse.Result> result_ =
-        java.util.Collections.emptyList();
-      private void ensureResultIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          result_ = new java.util.ArrayList<step19.AddressBookProtos.SearchResponse.Result>(result_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private step19.AddressBookProtos.SearchResponse.Result result_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
           step19.AddressBookProtos.SearchResponse.Result, step19.AddressBookProtos.SearchResponse.Result.Builder, step19.AddressBookProtos.SearchResponse.ResultOrBuilder> resultBuilder_;
-
       /**
        * <pre>
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public java.util.List<step19.AddressBookProtos.SearchResponse.Result> getResultList() {
+      public boolean hasResult() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <pre>
+       * List of Result objects
+       * </pre>
+       *
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
+       */
+      public step19.AddressBookProtos.SearchResponse.Result getResult() {
         if (resultBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(result_);
+          return result_ == null ? step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance() : result_;
         } else {
-          return resultBuilder_.getMessageList();
+          return resultBuilder_.getMessage();
         }
       }
       /**
@@ -1630,125 +1569,37 @@ public final class AddressBookProtos {
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public int getResultCount() {
+      public Builder setResult(step19.AddressBookProtos.SearchResponse.Result value) {
         if (resultBuilder_ == null) {
-          return result_.size();
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          result_ = value;
+          onChanged();
         } else {
-          return resultBuilder_.getCount();
+          resultBuilder_.setMessage(value);
         }
+        bitField0_ |= 0x00000001;
+        return this;
       }
       /**
        * <pre>
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public step19.AddressBookProtos.SearchResponse.Result getResult(int index) {
-        if (resultBuilder_ == null) {
-          return result_.get(index);
-        } else {
-          return resultBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
       public Builder setResult(
-          int index, step19.AddressBookProtos.SearchResponse.Result value) {
-        if (resultBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureResultIsMutable();
-          result_.set(index, value);
-          onChanged();
-        } else {
-          resultBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public Builder setResult(
-          int index, step19.AddressBookProtos.SearchResponse.Result.Builder builderForValue) {
-        if (resultBuilder_ == null) {
-          ensureResultIsMutable();
-          result_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          resultBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public Builder addResult(step19.AddressBookProtos.SearchResponse.Result value) {
-        if (resultBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureResultIsMutable();
-          result_.add(value);
-          onChanged();
-        } else {
-          resultBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public Builder addResult(
-          int index, step19.AddressBookProtos.SearchResponse.Result value) {
-        if (resultBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureResultIsMutable();
-          result_.add(index, value);
-          onChanged();
-        } else {
-          resultBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public Builder addResult(
           step19.AddressBookProtos.SearchResponse.Result.Builder builderForValue) {
         if (resultBuilder_ == null) {
-          ensureResultIsMutable();
-          result_.add(builderForValue.build());
+          result_ = builderForValue.build();
           onChanged();
         } else {
-          resultBuilder_.addMessage(builderForValue.build());
+          resultBuilder_.setMessage(builderForValue.build());
         }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -1756,17 +1607,23 @@ public final class AddressBookProtos {
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public Builder addResult(
-          int index, step19.AddressBookProtos.SearchResponse.Result.Builder builderForValue) {
+      public Builder mergeResult(step19.AddressBookProtos.SearchResponse.Result value) {
         if (resultBuilder_ == null) {
-          ensureResultIsMutable();
-          result_.add(index, builderForValue.build());
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              result_ != null &&
+              result_ != step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance()) {
+            result_ =
+              step19.AddressBookProtos.SearchResponse.Result.newBuilder(result_).mergeFrom(value).buildPartial();
+          } else {
+            result_ = value;
+          }
           onChanged();
         } else {
-          resultBuilder_.addMessage(index, builderForValue.build());
+          resultBuilder_.mergeFrom(value);
         }
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -1774,35 +1631,16 @@ public final class AddressBookProtos {
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public Builder addAllResult(
-          java.lang.Iterable<? extends step19.AddressBookProtos.SearchResponse.Result> values) {
-        if (resultBuilder_ == null) {
-          ensureResultIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, result_);
-          onChanged();
-        } else {
-          resultBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
       public Builder clearResult() {
         if (resultBuilder_ == null) {
-          result_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          result_ = null;
           onChanged();
         } else {
           resultBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
       /**
@@ -1810,56 +1648,26 @@ public final class AddressBookProtos {
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public Builder removeResult(int index) {
-        if (resultBuilder_ == null) {
-          ensureResultIsMutable();
-          result_.remove(index);
-          onChanged();
-        } else {
-          resultBuilder_.remove(index);
-        }
-        return this;
+      public step19.AddressBookProtos.SearchResponse.Result.Builder getResultBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getResultFieldBuilder().getBuilder();
       }
       /**
        * <pre>
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public step19.AddressBookProtos.SearchResponse.Result.Builder getResultBuilder(
-          int index) {
-        return getResultFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder(
-          int index) {
-        if (resultBuilder_ == null) {
-          return result_.get(index);  } else {
-          return resultBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public java.util.List<? extends step19.AddressBookProtos.SearchResponse.ResultOrBuilder> 
-           getResultOrBuilderList() {
+      public step19.AddressBookProtos.SearchResponse.ResultOrBuilder getResultOrBuilder() {
         if (resultBuilder_ != null) {
-          return resultBuilder_.getMessageOrBuilderList();
+          return resultBuilder_.getMessageOrBuilder();
         } else {
-          return java.util.Collections.unmodifiableList(result_);
+          return result_ == null ?
+              step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance() : result_;
         }
       }
       /**
@@ -1867,43 +1675,15 @@ public final class AddressBookProtos {
        * List of Result objects
        * </pre>
        *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
+       * <code>optional .tutorial.SearchResponse.Result result = 1;</code>
        */
-      public step19.AddressBookProtos.SearchResponse.Result.Builder addResultBuilder() {
-        return getResultFieldBuilder().addBuilder(
-            step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public step19.AddressBookProtos.SearchResponse.Result.Builder addResultBuilder(
-          int index) {
-        return getResultFieldBuilder().addBuilder(
-            index, step19.AddressBookProtos.SearchResponse.Result.getDefaultInstance());
-      }
-      /**
-       * <pre>
-       * List of Result objects
-       * </pre>
-       *
-       * <code>repeated .tutorial.SearchResponse.Result result = 1;</code>
-       */
-      public java.util.List<step19.AddressBookProtos.SearchResponse.Result.Builder> 
-           getResultBuilderList() {
-        return getResultFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private com.google.protobuf.SingleFieldBuilderV3<
           step19.AddressBookProtos.SearchResponse.Result, step19.AddressBookProtos.SearchResponse.Result.Builder, step19.AddressBookProtos.SearchResponse.ResultOrBuilder> 
           getResultFieldBuilder() {
         if (resultBuilder_ == null) {
-          resultBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          resultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               step19.AddressBookProtos.SearchResponse.Result, step19.AddressBookProtos.SearchResponse.Result.Builder, step19.AddressBookProtos.SearchResponse.ResultOrBuilder>(
-                  result_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getResult(),
                   getParentForChildren(),
                   isClean());
           result_ = null;
@@ -2055,7 +1835,7 @@ public final class AddressBookProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n\023searchrequest.proto\022\010tutorial\"\211\001\n\016Sear" +
-      "chResponse\022/\n\006result\030\001 \003(\0132\037.tutorial.Se" +
+      "chResponse\022/\n\006result\030\001 \001(\0132\037.tutorial.Se" +
       "archResponse.Result\022\016\n\006status\030\002 \002(\t\0326\n\006R" +
       "esult\022\013\n\003url\030\001 \002(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010sni" +
       "ppets\030\003 \003(\tB\033\n\006step19B\021AddressBookProtos"
