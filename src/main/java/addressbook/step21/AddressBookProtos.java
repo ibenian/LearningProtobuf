@@ -51,38 +51,38 @@ public final class AddressBookProtos {
     int getResultPerPage();
 
     /**
-     * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
      */
-    boolean hasCorpus();
+    int getSearchtermsCount();
     /**
-     * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
      */
-    step21.AddressBookProtos.SearchRequest.Corpus getCorpus();
+    boolean containsSearchterms(
+        java.lang.String key);
+    /**
+     * Use {@link #getSearchtermsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getSearchterms();
+    /**
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getSearchtermsMap();
+    /**
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
+     */
 
+    java.lang.String getSearchtermsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
     /**
-     * <code>optional string corpusText = 5;</code>
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
      */
-    boolean hasCorpusText();
-    /**
-     * <code>optional string corpusText = 5;</code>
-     */
-    java.lang.String getCorpusText();
-    /**
-     * <code>optional string corpusText = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getCorpusTextBytes();
 
-    /**
-     * <code>optional int32 corpusId = 6;</code>
-     */
-    boolean hasCorpusId();
-    /**
-     * <code>optional int32 corpusId = 6;</code>
-     */
-    int getCorpusId();
-
-    public step21.AddressBookProtos.SearchRequest.TestOneofCase getTestOneofCase();
+    java.lang.String getSearchtermsOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code tutorial.SearchRequest}
@@ -145,26 +145,17 @@ public final class AddressBookProtos {
               resultPerPage_ = input.readInt32();
               break;
             }
-            case 32: {
-              int rawValue = input.readEnum();
-              step21.AddressBookProtos.SearchRequest.Corpus value = step21.AddressBookProtos.SearchRequest.Corpus.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(4, rawValue);
-              } else {
-                testOneofCase_ = 4;
-                testOneof_ = rawValue;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                searchterms_ = com.google.protobuf.MapField.newMapField(
+                    SearchtermsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
               }
-              break;
-            }
-            case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
-              testOneofCase_ = 5;
-              testOneof_ = bs;
-              break;
-            }
-            case 48: {
-              testOneofCase_ = 6;
-              testOneof_ = input.readInt32();
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              searchterms__ = input.readMessage(
+                  SearchtermsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              searchterms_.getMutableMap().put(
+                  searchterms__.getKey(), searchterms__.getValue());
               break;
             }
           }
@@ -184,6 +175,17 @@ public final class AddressBookProtos {
       return step21.AddressBookProtos.internal_static_tutorial_SearchRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetSearchterms();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return step21.AddressBookProtos.internal_static_tutorial_SearchRequest_fieldAccessorTable
@@ -191,182 +193,7 @@ public final class AddressBookProtos {
               step21.AddressBookProtos.SearchRequest.class, step21.AddressBookProtos.SearchRequest.Builder.class);
     }
 
-    /**
-     * Protobuf enum {@code tutorial.SearchRequest.Corpus}
-     */
-    public enum Corpus
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>UNIVERSAL = 0;</code>
-       */
-      UNIVERSAL(0),
-      /**
-       * <code>WEB = 1;</code>
-       */
-      WEB(1),
-      /**
-       * <code>IMAGES = 2;</code>
-       */
-      IMAGES(2),
-      /**
-       * <code>LOCAL = 3;</code>
-       */
-      LOCAL(3),
-      /**
-       * <code>NEWS = 4;</code>
-       */
-      NEWS(4),
-      /**
-       * <code>PRODUCTS = 5;</code>
-       */
-      PRODUCTS(5),
-      /**
-       * <code>VIDEO = 6;</code>
-       */
-      VIDEO(6),
-      ;
-
-      /**
-       * <code>UNIVERSAL = 0;</code>
-       */
-      public static final int UNIVERSAL_VALUE = 0;
-      /**
-       * <code>WEB = 1;</code>
-       */
-      public static final int WEB_VALUE = 1;
-      /**
-       * <code>IMAGES = 2;</code>
-       */
-      public static final int IMAGES_VALUE = 2;
-      /**
-       * <code>LOCAL = 3;</code>
-       */
-      public static final int LOCAL_VALUE = 3;
-      /**
-       * <code>NEWS = 4;</code>
-       */
-      public static final int NEWS_VALUE = 4;
-      /**
-       * <code>PRODUCTS = 5;</code>
-       */
-      public static final int PRODUCTS_VALUE = 5;
-      /**
-       * <code>VIDEO = 6;</code>
-       */
-      public static final int VIDEO_VALUE = 6;
-
-
-      public final int getNumber() {
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Corpus valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static Corpus forNumber(int value) {
-        switch (value) {
-          case 0: return UNIVERSAL;
-          case 1: return WEB;
-          case 2: return IMAGES;
-          case 3: return LOCAL;
-          case 4: return NEWS;
-          case 5: return PRODUCTS;
-          case 6: return VIDEO;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Corpus>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Corpus> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Corpus>() {
-              public Corpus findValueByNumber(int number) {
-                return Corpus.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return step21.AddressBookProtos.SearchRequest.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Corpus[] VALUES = values();
-
-      public static Corpus valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Corpus(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:tutorial.SearchRequest.Corpus)
-    }
-
     private int bitField0_;
-    private int testOneofCase_ = 0;
-    private java.lang.Object testOneof_;
-    public enum TestOneofCase
-        implements com.google.protobuf.Internal.EnumLite {
-      CORPUS(4),
-      CORPUSTEXT(5),
-      CORPUSID(6),
-      TESTONEOF_NOT_SET(0);
-      private final int value;
-      private TestOneofCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static TestOneofCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static TestOneofCase forNumber(int value) {
-        switch (value) {
-          case 4: return CORPUS;
-          case 5: return CORPUSTEXT;
-          case 6: return CORPUSID;
-          case 0: return TESTONEOF_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public TestOneofCase
-    getTestOneofCase() {
-      return TestOneofCase.forNumber(
-          testOneofCase_);
-    }
-
     public static final int QUERY_FIELD_NUMBER = 1;
     private volatile java.lang.Object query_;
     /**
@@ -439,89 +266,80 @@ public final class AddressBookProtos {
       return resultPerPage_;
     }
 
-    public static final int CORPUS_FIELD_NUMBER = 4;
-    /**
-     * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-     */
-    public boolean hasCorpus() {
-      return testOneofCase_ == 4;
+    public static final int SEARCHTERMS_FIELD_NUMBER = 4;
+    private static final class SearchtermsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  step21.AddressBookProtos.internal_static_tutorial_SearchRequest_SearchtermsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
     }
-    /**
-     * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-     */
-    public step21.AddressBookProtos.SearchRequest.Corpus getCorpus() {
-      if (testOneofCase_ == 4) {
-        step21.AddressBookProtos.SearchRequest.Corpus result = step21.AddressBookProtos.SearchRequest.Corpus.valueOf(
-            (java.lang.Integer) testOneof_);
-        return result == null ? step21.AddressBookProtos.SearchRequest.Corpus.UNIVERSAL : result;
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> searchterms_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetSearchterms() {
+      if (searchterms_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            SearchtermsDefaultEntryHolder.defaultEntry);
       }
-      return step21.AddressBookProtos.SearchRequest.Corpus.UNIVERSAL;
-    }
-
-    public static final int CORPUSTEXT_FIELD_NUMBER = 5;
-    /**
-     * <code>optional string corpusText = 5;</code>
-     */
-    public boolean hasCorpusText() {
-      return testOneofCase_ == 5;
-    }
-    /**
-     * <code>optional string corpusText = 5;</code>
-     */
-    public java.lang.String getCorpusText() {
-      java.lang.Object ref = "";
-      if (testOneofCase_ == 5) {
-        ref = testOneof_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (bs.isValidUtf8() && (testOneofCase_ == 5)) {
-          testOneof_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>optional string corpusText = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getCorpusTextBytes() {
-      java.lang.Object ref = "";
-      if (testOneofCase_ == 5) {
-        ref = testOneof_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (testOneofCase_ == 5) {
-          testOneof_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+      return searchterms_;
     }
 
-    public static final int CORPUSID_FIELD_NUMBER = 6;
-    /**
-     * <code>optional int32 corpusId = 6;</code>
-     */
-    public boolean hasCorpusId() {
-      return testOneofCase_ == 6;
+    public int getSearchtermsCount() {
+      return internalGetSearchterms().getMap().size();
     }
     /**
-     * <code>optional int32 corpusId = 6;</code>
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
      */
-    public int getCorpusId() {
-      if (testOneofCase_ == 6) {
-        return (java.lang.Integer) testOneof_;
+
+    public boolean containsSearchterms(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetSearchterms().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getSearchtermsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getSearchterms() {
+      return getSearchtermsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getSearchtermsMap() {
+      return internalGetSearchterms().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
+     */
+
+    public java.lang.String getSearchtermsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetSearchterms().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; searchterms = 4;</code>
+     */
+
+    public java.lang.String getSearchtermsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetSearchterms().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
-      return 0;
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -549,16 +367,12 @@ public final class AddressBookProtos {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeInt32(3, resultPerPage_);
       }
-      if (testOneofCase_ == 4) {
-        output.writeEnum(4, ((java.lang.Integer) testOneof_));
-      }
-      if (testOneofCase_ == 5) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, testOneof_);
-      }
-      if (testOneofCase_ == 6) {
-        output.writeInt32(
-            6, (int)((java.lang.Integer) testOneof_));
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetSearchterms(),
+          SearchtermsDefaultEntryHolder.defaultEntry,
+          4);
       unknownFields.writeTo(output);
     }
 
@@ -578,17 +392,15 @@ public final class AddressBookProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(3, resultPerPage_);
       }
-      if (testOneofCase_ == 4) {
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetSearchterms().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        searchterms__ = SearchtermsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, ((java.lang.Integer) testOneof_));
-      }
-      if (testOneofCase_ == 5) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, testOneof_);
-      }
-      if (testOneofCase_ == 6) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(
-              6, (int)((java.lang.Integer) testOneof_));
+            .computeMessageSize(4, searchterms__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -622,25 +434,8 @@ public final class AddressBookProtos {
         result = result && (getResultPerPage()
             == other.getResultPerPage());
       }
-      result = result && getTestOneofCase().equals(
-          other.getTestOneofCase());
-      if (!result) return false;
-      switch (testOneofCase_) {
-        case 4:
-          result = result && getCorpus()
-              .equals(other.getCorpus());
-          break;
-        case 5:
-          result = result && getCorpusText()
-              .equals(other.getCorpusText());
-          break;
-        case 6:
-          result = result && (getCorpusId()
-              == other.getCorpusId());
-          break;
-        case 0:
-        default:
-      }
+      result = result && internalGetSearchterms().equals(
+          other.internalGetSearchterms());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -664,21 +459,9 @@ public final class AddressBookProtos {
         hash = (37 * hash) + RESULT_PER_PAGE_FIELD_NUMBER;
         hash = (53 * hash) + getResultPerPage();
       }
-      switch (testOneofCase_) {
-        case 4:
-          hash = (37 * hash) + CORPUS_FIELD_NUMBER;
-          hash = (53 * hash) + getCorpus().getNumber();
-          break;
-        case 5:
-          hash = (37 * hash) + CORPUSTEXT_FIELD_NUMBER;
-          hash = (53 * hash) + getCorpusText().hashCode();
-          break;
-        case 6:
-          hash = (37 * hash) + CORPUSID_FIELD_NUMBER;
-          hash = (53 * hash) + getCorpusId();
-          break;
-        case 0:
-        default:
+      if (!internalGetSearchterms().getMap().isEmpty()) {
+        hash = (37 * hash) + SEARCHTERMS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetSearchterms().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -774,6 +557,28 @@ public final class AddressBookProtos {
         return step21.AddressBookProtos.internal_static_tutorial_SearchRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetSearchterms();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableSearchterms();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return step21.AddressBookProtos.internal_static_tutorial_SearchRequest_fieldAccessorTable
@@ -804,8 +609,7 @@ public final class AddressBookProtos {
         bitField0_ = (bitField0_ & ~0x00000002);
         resultPerPage_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        testOneofCase_ = 0;
-        testOneof_ = null;
+        internalGetMutableSearchterms().clear();
         return this;
       }
 
@@ -842,17 +646,9 @@ public final class AddressBookProtos {
           to_bitField0_ |= 0x00000004;
         }
         result.resultPerPage_ = resultPerPage_;
-        if (testOneofCase_ == 4) {
-          result.testOneof_ = testOneof_;
-        }
-        if (testOneofCase_ == 5) {
-          result.testOneof_ = testOneof_;
-        }
-        if (testOneofCase_ == 6) {
-          result.testOneof_ = testOneof_;
-        }
+        result.searchterms_ = internalGetSearchterms();
+        result.searchterms_.makeImmutable();
         result.bitField0_ = to_bitField0_;
-        result.testOneofCase_ = testOneofCase_;
         onBuilt();
         return result;
       }
@@ -905,25 +701,8 @@ public final class AddressBookProtos {
         if (other.hasResultPerPage()) {
           setResultPerPage(other.getResultPerPage());
         }
-        switch (other.getTestOneofCase()) {
-          case CORPUS: {
-            setCorpus(other.getCorpus());
-            break;
-          }
-          case CORPUSTEXT: {
-            testOneofCase_ = 5;
-            testOneof_ = other.testOneof_;
-            onChanged();
-            break;
-          }
-          case CORPUSID: {
-            setCorpusId(other.getCorpusId());
-            break;
-          }
-          case TESTONEOF_NOT_SET: {
-            break;
-          }
-        }
+        internalGetMutableSearchterms().mergeFrom(
+            other.internalGetSearchterms());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -953,21 +732,6 @@ public final class AddressBookProtos {
         }
         return this;
       }
-      private int testOneofCase_ = 0;
-      private java.lang.Object testOneof_;
-      public TestOneofCase
-          getTestOneofCase() {
-        return TestOneofCase.forNumber(
-            testOneofCase_);
-      }
-
-      public Builder clearTestOneof() {
-        testOneofCase_ = 0;
-        testOneof_ = null;
-        onChanged();
-        return this;
-      }
-
       private int bitField0_;
 
       private java.lang.Object query_ = "";
@@ -1110,167 +874,126 @@ public final class AddressBookProtos {
         return this;
       }
 
-      /**
-       * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-       */
-      public boolean hasCorpus() {
-        return testOneofCase_ == 4;
-      }
-      /**
-       * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-       */
-      public step21.AddressBookProtos.SearchRequest.Corpus getCorpus() {
-        if (testOneofCase_ == 4) {
-          step21.AddressBookProtos.SearchRequest.Corpus result = step21.AddressBookProtos.SearchRequest.Corpus.valueOf(
-              (java.lang.Integer) testOneof_);
-          return result == null ? step21.AddressBookProtos.SearchRequest.Corpus.UNIVERSAL : result;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> searchterms_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetSearchterms() {
+        if (searchterms_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              SearchtermsDefaultEntryHolder.defaultEntry);
         }
-        return step21.AddressBookProtos.SearchRequest.Corpus.UNIVERSAL;
+        return searchterms_;
       }
-      /**
-       * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-       */
-      public Builder setCorpus(step21.AddressBookProtos.SearchRequest.Corpus value) {
-        if (value == null) {
-          throw new NullPointerException();
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableSearchterms() {
+        onChanged();;
+        if (searchterms_ == null) {
+          searchterms_ = com.google.protobuf.MapField.newMapField(
+              SearchtermsDefaultEntryHolder.defaultEntry);
         }
-        testOneofCase_ = 4;
-        testOneof_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .tutorial.SearchRequest.Corpus corpus = 4;</code>
-       */
-      public Builder clearCorpus() {
-        if (testOneofCase_ == 4) {
-          testOneofCase_ = 0;
-          testOneof_ = null;
-          onChanged();
+        if (!searchterms_.isMutable()) {
+          searchterms_ = searchterms_.copy();
         }
-        return this;
+        return searchterms_;
       }
 
-      /**
-       * <code>optional string corpusText = 5;</code>
-       */
-      public boolean hasCorpusText() {
-        return testOneofCase_ == 5;
+      public int getSearchtermsCount() {
+        return internalGetSearchterms().getMap().size();
       }
       /**
-       * <code>optional string corpusText = 5;</code>
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
        */
-      public java.lang.String getCorpusText() {
-        java.lang.Object ref = "";
-        if (testOneofCase_ == 5) {
-          ref = testOneof_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (testOneofCase_ == 5) {
-            if (bs.isValidUtf8()) {
-              testOneof_ = s;
-            }
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+
+      public boolean containsSearchterms(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetSearchterms().getMap().containsKey(key);
       }
       /**
-       * <code>optional string corpusText = 5;</code>
+       * Use {@link #getSearchtermsMap()} instead.
        */
-      public com.google.protobuf.ByteString
-          getCorpusTextBytes() {
-        java.lang.Object ref = "";
-        if (testOneofCase_ == 5) {
-          ref = testOneof_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (testOneofCase_ == 5) {
-            testOneof_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getSearchterms() {
+        return getSearchtermsMap();
       }
       /**
-       * <code>optional string corpusText = 5;</code>
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
        */
-      public Builder setCorpusText(
+
+      public java.util.Map<java.lang.String, java.lang.String> getSearchtermsMap() {
+        return internalGetSearchterms().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
+       */
+
+      public java.lang.String getSearchtermsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetSearchterms().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
+       */
+
+      public java.lang.String getSearchtermsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetSearchterms().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearSearchterms() {
+        internalGetMutableSearchterms().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
+       */
+
+      public Builder removeSearchterms(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableSearchterms().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableSearchterms() {
+        return internalGetMutableSearchterms().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
+       */
+      public Builder putSearchterms(
+          java.lang.String key,
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  testOneofCase_ = 5;
-        testOneof_ = value;
-        onChanged();
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableSearchterms().getMutableMap()
+            .put(key, value);
         return this;
       }
       /**
-       * <code>optional string corpusText = 5;</code>
+       * <code>map&lt;string, string&gt; searchterms = 4;</code>
        */
-      public Builder clearCorpusText() {
-        if (testOneofCase_ == 5) {
-          testOneofCase_ = 0;
-          testOneof_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>optional string corpusText = 5;</code>
-       */
-      public Builder setCorpusTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  testOneofCase_ = 5;
-        testOneof_ = value;
-        onChanged();
-        return this;
-      }
 
-      /**
-       * <code>optional int32 corpusId = 6;</code>
-       */
-      public boolean hasCorpusId() {
-        return testOneofCase_ == 6;
-      }
-      /**
-       * <code>optional int32 corpusId = 6;</code>
-       */
-      public int getCorpusId() {
-        if (testOneofCase_ == 6) {
-          return (java.lang.Integer) testOneof_;
-        }
-        return 0;
-      }
-      /**
-       * <code>optional int32 corpusId = 6;</code>
-       */
-      public Builder setCorpusId(int value) {
-        testOneofCase_ = 6;
-        testOneof_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 corpusId = 6;</code>
-       */
-      public Builder clearCorpusId() {
-        if (testOneofCase_ == 6) {
-          testOneofCase_ = 0;
-          testOneof_ = null;
-          onChanged();
-        }
+      public Builder putAllSearchterms(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableSearchterms().getMutableMap()
+            .putAll(values);
         return this;
       }
       public final Builder setUnknownFields(
@@ -1327,6 +1050,11 @@ public final class AddressBookProtos {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_tutorial_SearchRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_tutorial_SearchRequest_SearchtermsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_tutorial_SearchRequest_SearchtermsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1336,15 +1064,13 @@ public final class AddressBookProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023searchrequest.proto\022\010tutorial\"\222\002\n\rSear" +
+      "\n\023searchrequest.proto\022\010tutorial\"\277\001\n\rSear" +
       "chRequest\022\r\n\005query\030\001 \002(\t\022\023\n\013page_number\030" +
-      "\002 \001(\005\022\027\n\017result_per_page\030\003 \001(\005\0220\n\006corpus" +
-      "\030\004 \001(\0162\036.tutorial.SearchRequest.CorpusH\000" +
-      "\022\024\n\ncorpusText\030\005 \001(\tH\000\022\022\n\010corpusId\030\006 \001(\005" +
-      "H\000\"Z\n\006Corpus\022\r\n\tUNIVERSAL\020\000\022\007\n\003WEB\020\001\022\n\n\006" +
-      "IMAGES\020\002\022\t\n\005LOCAL\020\003\022\010\n\004NEWS\020\004\022\014\n\010PRODUCT" +
-      "S\020\005\022\t\n\005VIDEO\020\006B\014\n\ntest_oneofB\033\n\006step21B\021" +
-      "AddressBookProtos"
+      "\002 \001(\005\022\027\n\017result_per_page\030\003 \001(\005\022=\n\013search" +
+      "terms\030\004 \003(\0132(.tutorial.SearchRequest.Sea" +
+      "rchtermsEntry\0322\n\020SearchtermsEntry\022\013\n\003key" +
+      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001B\033\n\006step21B\021Add" +
+      "ressBookProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1363,7 +1089,13 @@ public final class AddressBookProtos {
     internal_static_tutorial_SearchRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_tutorial_SearchRequest_descriptor,
-        new java.lang.String[] { "Query", "PageNumber", "ResultPerPage", "Corpus", "CorpusText", "CorpusId", "TestOneof", });
+        new java.lang.String[] { "Query", "PageNumber", "ResultPerPage", "Searchterms", });
+    internal_static_tutorial_SearchRequest_SearchtermsEntry_descriptor =
+      internal_static_tutorial_SearchRequest_descriptor.getNestedTypes().get(0);
+    internal_static_tutorial_SearchRequest_SearchtermsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_tutorial_SearchRequest_SearchtermsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
