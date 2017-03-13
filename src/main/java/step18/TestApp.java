@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * Created by ibenian on 3/11/17.
  *
- * Importing proto file
+ * Nested message types
  *
  */
 public class TestApp {

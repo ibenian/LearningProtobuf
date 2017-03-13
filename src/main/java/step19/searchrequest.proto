@@ -1,0 +1,16 @@
+syntax = "proto2";
+package tutorial;
+
+option java_package = "step19";
+option java_outer_classname = "AddressBookProtos";
+
+message SearchResponse {
+    message Result {                            // Nested message type
+        required string url = 1;
+        optional string title = 2;
+        repeated string snippets = 3;           // List of snippets
+    }
+
+    repeated Result result = 1;                 // List of Result objects
+    required string status = 2;
+}
