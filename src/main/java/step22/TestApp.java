@@ -30,5 +30,10 @@ public class TestApp {
         System.out.println("request read from buffer:");
         System.out.println(requestRead);
 
+        /*SearchService service;
+        RpcController controller;
+        service.search(controller, request, response ->
+            System.out.println(resposne)
+        );*/
     }
 }
