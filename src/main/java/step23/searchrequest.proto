@@ -1,0 +1,21 @@
+syntax = "proto2";
+package tutorial;
+
+import "google/protobuf/any.proto";
+
+option java_package = "step23";
+option java_outer_classname = "AddressBookProtos";
+
+message SearchRequest {
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3;
+
+    optional google.protobuf.Any args = 4;
+}
+
+message SpecialArgs {
+    optional string projection = 1;
+    optional int32 time_out = 2;
+}
+
